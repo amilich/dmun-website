@@ -1,0 +1,10 @@
+.carousel{
+	width:1000; height:320px;
+}
+.carousel {
+	overflow:hidden
+}
+
+body {
+    background-color: #D5DCE0;
+}
