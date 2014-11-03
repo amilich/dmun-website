@@ -7,6 +7,8 @@
 
 body {
     background-color: #F5FBEF;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
 }
 
 #header {
@@ -16,6 +18,11 @@ body {
 #content {
   margin-top: 100px;
 }
+
+#navbar { 
+	width: 100%; 
+}
+
 
 #topbar    { 
     border-bottom:1px solid #D4D1CF; 
