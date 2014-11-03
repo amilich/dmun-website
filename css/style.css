@@ -1,10 +1,57 @@
 .carousel{
-	width:1000; height:320px;
+	width:max-width; height:max-height;
 }
 .carousel {
 	overflow:hidden
 }
 
 body {
-    background-color: #D5DCE0;
+    background-color: #F5FBEF;
 }
+
+#header {
+  position: fixed;
+}
+
+#content {
+  margin-top: 100px;
+}
+
+#topbar    { 
+    border-bottom:1px solid #D4D1CF; 
+    background:#D4D1CF; 
+    padding:10px 20px; 
+    position:fixed; 
+    top:0; 
+    left:0; 
+    z-index:2000; 
+    width:100%;
+}
+
+//jquery
+
+$(document).ready(function() {
+    (function() {
+        //settings
+        var fadeSpeed = 200, fadeTo = 0.5, topDistance = 30;
+        var topbarME = function() { $('#topbar').fadeTo(fadeSpeed,1); }, topbarML = function() { $('#topbar').fadeTo(fadeSpeed,fadeTo); };
+        var inside = false;
+        //do
+        $(window).scroll(function() {
+            position = $(window).scrollTop();
+            if(position > topDistance && !inside) {
+                //add events
+                topbarML();
+                $('#topbar').bind('mouseenter',topbarME);
+                $('#topbar').bind('mouseleave',topbarML);
+                inside = true;
+            }
+            else if (position < topDistance){
+                topbarME();
+                $('#topbar').unbind('mouseenter',topbarME);
+                $('#topbar').unbind('mouseleave',topbarML);
+                inside = false;
+            }
+        });
+    })();
+});
