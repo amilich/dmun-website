@@ -11,6 +11,24 @@ body {
     padding-right: 0px !important;
 }
 
+.carousel-caption {
+left: 20%;
+right: 20%;
+padding-bottom: 30px;
+}
+
+.carousel-caption {
+    left: 600px;
+    right: 0;
+    bottom: 0;
+    top: 250px;
+    z-index: 10;
+    padding-top: 0;
+    padding-bottom: 0;
+    text-align: center;
+    text-shadow: none;
+}
+
 #header {
   position: fixed;
 }
